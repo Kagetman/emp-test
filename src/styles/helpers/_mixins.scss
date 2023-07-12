@@ -1,0 +1,73 @@
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    font-style: normal;
+    font-weight: $weight;
+    src: local("Montserrat"),
+    url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@mixin page-menu($font-size, $font-weight, $gap) {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0 $gap;
+  }
+
+  &__link {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: rgba(var(--light-color-opaciy-80));
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin before-icon($size, $name) {
+  &:before {
+    content: "";
+    display: block;
+    height: $size;
+    width: $size;
+    flex-shrink: 0;
+    background: url(../img/sprites/sprite.svg##{$name}) no-repeat center / auto $size;
+  }
+}
+
+@mixin main-container() {
+  box-sizing: border-box;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  padding-top: 150px;
+}
+
+%img-cover {
+  object-fit: cover;
+  object-position: center
+}
+
+%h2-title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+%reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%dark-theme {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
