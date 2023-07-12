@@ -1,0 +1,16 @@
+.form {
+  &__group {
+    display: flex;
+    padding: 10px;
+    background: var(--light-color);
+    border-radius: var(--round-border-radius);
+  }
+  &__button-group {
+    border-radius: var(--round-border-radius);
+  }
+  &--small {
+    .form__group {
+      padding: 5px;
+    }
+  }
+}

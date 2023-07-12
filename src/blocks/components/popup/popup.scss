@@ -1,0 +1,48 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(var(--secondary-color-opacity-30));
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+  z-index: 100;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+  }
+
+  &__inner {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: var(--light-color);
+    max-width: 675px;
+    width: 100%;
+    padding: 40px;
+    border-radius: var(--round-border-radius);
+    transition: 0.5s all;
+  }
+
+  &__inner.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background: transparent url(../img/sprites/sprite.svg#icon-close) no-repeat center / auto 20px;
+  }
+}

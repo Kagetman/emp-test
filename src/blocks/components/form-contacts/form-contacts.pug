@@ -1,0 +1,7 @@
+form.form-contacts
+    each item in form
+        .form-contacts__row
+            #{item.field}.field(class=item.modifier type=item.type placeholder=item.placeholder)
+            if item.error
+                .form-contacts__error Неправильно введена почта
+    button.form-contacts__button.button.button--medium.button--secondary(type="submit") Submit

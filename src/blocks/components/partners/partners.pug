@@ -1,0 +1,28 @@
+-
+    const partners = [
+        {
+            img: "./img/svg/partner-logo-1.svg",
+            alt: "PP"
+        },
+        {
+            img: "./img/svg/partner-logo-2.svg",
+            alt: "Webflow"
+        },
+        {
+            img: "./img/svg/partner-logo-3.svg",
+            alt: "Google"
+        },
+        {
+            img: "./img/svg/partner-logo-4.svg",
+            alt: "Amazon"
+        },
+        {
+            img: "./img/svg/partner-logo-5.svg",
+            alt: "Adobe"
+        }
+    ]
+
+ul.partners
+    each partner in partners
+        li.partners__item
+            img.partners__logo(src=partner.img alt=partner.alt)

@@ -1,0 +1,32 @@
+-
+    const footer_links = [
+        {
+            modifier: "footer__link--active",
+            text: "Home"
+        },
+        {
+            text: "About"
+        },
+        {
+            text: "Service"
+        },
+        {
+            text: "Portfolio"
+        },
+        {
+            text: "Blog"
+        },
+        {
+            text: "Contact"
+        }
+    ]
+
+footer.footer
+    .footer__inner
+        .footer__top
+            include ../../components/logo/logo
+            .footer__menu
+                .footer__list
+                    each link in footer_links
+                        a.footer__link(href="#" class=link.modifier title=link.text)= link.text
+        .footer__bottom Copyright © 2022 Kartik Bansal . All Rights Reseved.

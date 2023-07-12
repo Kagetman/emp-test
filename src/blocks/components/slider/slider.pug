@@ -1,0 +1,56 @@
+include ../button/button
+
+-
+    const slider = [
+        {
+            img: "./img/img-service.jpg",
+            alt: "Slide-1",
+            date: "19 July 2022",
+            title: "Introduction To Real Estate Investing"
+        },
+        {
+            img: "./img/slide-2.jpg",
+            alt: "Slide-2",
+            date: "14 March 2022",
+            title: "How I Creatively Got Into Real Estate (Twice)"
+        },
+        {
+            img: "./img/slide-3.jpg",
+            alt: "Slide-3",
+            date: "28 February 2022",
+            title: "The Power Of Real Estate To Create Wealth"
+        },
+        {
+            img: "./img/slide-1.jpg",
+            alt: "Slide-1",
+            date: "19 July 2022",
+            title: "Introduction To Real Estate Investing"
+        },
+        {
+            img: "./img/slide-2.jpg",
+            alt: "Slide-2",
+            date: "14 March 2022",
+            title: "How I Creatively Got Into Real Estate (Twice)"
+        },
+        {
+            img: "./img/slide-1.jpg",
+            alt: "Slide-1",
+            date: "28 February 2022",
+            title: "The Power Of Real Estate To Create Wealth"
+        }
+    ]
+
+.slider
+    button.slider__button.slider__button--prev(type="button" aria-label="Previous")
+    .slider__wrap
+        .slider__inner
+            ul.slider__list
+                each item in slider
+                    li.slider__item
+                        .slider__img
+                            img(src=item.img alt=item.alt)
+                        .slider__body
+                            span.slider__date=item.date
+                            h3.slider__title=item.title
+                            +button("Read More","slider__button-more button button--small button--secondary", "button")
+    button.slider__button.slider__button--next(type="button" aria-label="Next")

@@ -1,0 +1,11 @@
+include ../../../../blocks/components/form/form
+
+section.offer
+    .offer__inner
+        .offer__left
+            .offer__content
+                h1.offer__title Lectus magna Fringilla urna, Porttitor
+                p.offer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor.
+            +form("text", "field--group field--location", "Search by location...", "Search Now","form__button-group button--large button--secondary", "submit")
+        .offer__decors(aria-hidden="true")
+            img(src="./img/img-offer.jpg" alt="lectus magna")

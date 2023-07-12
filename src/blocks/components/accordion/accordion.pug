@@ -1,0 +1,29 @@
+-
+    const accordion = [
+        {
+            modifier: "accordion__item--show",
+            title: "Best interest rates on the market.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla"
+        },
+        {
+            title: "Prevent unstable prices",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla"
+        },
+        {
+            title: "Best price on the market",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla"
+        },
+        {
+            title: "Security of your data",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla"
+        }
+    ]
+
+ul.accordion
+    each item in accordion
+        li.accordion__item(class=item.modifier)
+            button.accordion__head(type="button")
+                span.accordion__title=item.title
+                span.accordion__arrow
+            .accordion__body
+                .accordion__text=item.text

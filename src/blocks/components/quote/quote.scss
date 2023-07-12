@@ -1,0 +1,39 @@
+.quote {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  margin: 0;
+  color: rgba(var(--light-color-opaciy-80));
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__author {
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--light-color);
+  }
+
+  &__text {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 642px;
+    margin: 0;
+    @include before-icon(40px, "icon-quote");
+
+    &:before {
+      margin-top: -12px;
+    }
+  }
+}

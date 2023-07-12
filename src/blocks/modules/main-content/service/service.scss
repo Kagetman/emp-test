@@ -1,0 +1,36 @@
+.service {
+  background: var(--light-color);
+
+  &__inner {
+    @include main-container();
+  }
+
+  &__body {
+    display: flex;
+    gap: 0 80px;
+  }
+
+  &__title {
+    @extend %h2-title;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__accordion {
+    margin-top: 40px;
+  }
+
+  &__img {
+    max-width: 572px;
+    width: 100%;
+
+    img {
+      @extend %img-cover;
+    }
+  }
+}
+

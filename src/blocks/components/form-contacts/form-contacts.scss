@@ -1,0 +1,10 @@
+.form-contacts {
+  &__row {
+    margin-bottom: 22px;
+  }
+  &__error {
+    font-size: 12px;
+    margin: 5px 0 0 16px;
+    color: var(--danger-color);
+  }
+}

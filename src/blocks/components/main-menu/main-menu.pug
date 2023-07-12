@@ -1,0 +1,21 @@
+-
+    const links = [
+        {
+            text: "Property"
+        },
+        {
+            text: "Services"
+        },
+        {
+            text: "Product"
+        },
+        {
+            text: "About Us"
+        }
+    ]
+
+nav.main-menu(aria-label="Основное меню")
+    ul.main-menu__list
+        each link in links
+            li.main-menu__item
+                a.main-menu__link(href="#" title=link.text)= link.text

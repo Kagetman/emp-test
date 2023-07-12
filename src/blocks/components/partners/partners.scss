@@ -1,0 +1,8 @@
+.partners {
+  display: flex;
+  justify-content: space-between;
+  @extend %reset-list;
+  &__logo {
+    height: 50px;
+  }
+}

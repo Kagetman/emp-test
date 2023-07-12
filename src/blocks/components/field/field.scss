@@ -1,0 +1,38 @@
+.field {
+  box-sizing: border-box;
+  font-size: 20px;
+  width: 100%;
+  padding: 16px;
+  line-height: 1;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border-radius: var(--rounded-border-radius);
+  border: 1px solid rgba(#7D9B8F, 30%);
+  transition: border var(--transition-property);
+  &:hover:enabled,
+  &:focus {
+    border-color: var(--secondary-color);
+  }
+  &:disabled,
+  &:disabled::placeholder {
+    color: var(--dark-color-opacity-10);
+  }
+  &--error:enabled {
+    &,
+    &:hover,
+    &:focus {
+      border-color: var(--danger-color);
+    }
+  }
+  &--group:enabled {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+  &--location {
+    background: url(../img/sprites/sprite.svg#icon-location) no-repeat -35px center / auto 40px;
+    padding-left: 64px;
+  }
+}

@@ -1,0 +1,73 @@
+.card {
+  background: var(--light-color);
+  border-radius: 10px;
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--dark-color);
+  }
+  &__img {
+    width: 100%;
+    img {
+      display: block;
+      height: 281px;
+      @extend %img-cover;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    gap: 22px 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32px 32px 38px;
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__features {
+    @extend %reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 22px;
+    margin-top: auto;
+    border-top: 1px solid var(--dark-color);
+  }
+  &__feature {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 0 10px;
+    padding: 10px 18px;
+    max-width: 33.333%;
+    box-shadow: 0 0 6px 0 #14141426;
+    border-radius: var(--rounded-border-radius);
+    &--price {
+      @include before-icon(12px, "icon-card-1");
+    }
+    &--amt {
+      @include before-icon(12px, "icon-card-2");
+    }
+    &--num {
+      @include before-icon(12px, "icon-card-3");
+    }
+  }
+  &__icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+}

@@ -1,0 +1,50 @@
+-
+    const contacts = [
+        {
+            modifier: "contacts__item--location",
+            icon: "./img/sprites/sprite.svg#icon-address",
+            text: "99 something street, City, Country"
+        },
+        {
+            modifier: "contacts__item--phone",
+            icon: "./img/sprites/sprite.svg#icon-phone",
+            text: "+998 (99) 999 99 99"
+        },
+        {
+            modifier: "contacts__item--email",
+            icon: "./img/sprites/sprite.svg#icon-email",
+            text: "someLorem@gmail.com"
+        }
+    ]
+    const form = [
+        {
+            error: true,
+            modifier: "field--error",
+            field: "input",
+            type: "text",
+            placeholder: "Email"
+        },
+        {
+            field: "input",
+            type: "text",
+            placeholder: "Full name"
+        },
+        {
+            field: "textarea",
+            placeholder: "Write your massage here"
+        }
+    ]
+
+section.contacts
+    .contacts__inner
+        h2.contacts__title Contact us
+        .contacts__body
+            .contacts__address
+                .contacts__list
+                    each item in contacts
+                        .contacts__item(class=item.modifier)
+                            .contacts__text=item.text
+                .contacts__map
+                    img(src="./img/map.jpg" alt="Map")
+            .contacts__form
+                include ../../../components/form-contacts/form-contacts

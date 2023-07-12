@@ -1,0 +1,22 @@
+.header {
+  &__inner {
+    @include main-container();
+    padding-top: 40px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__button {
+    font-weight: 500;
+  }
+}
+
+
+

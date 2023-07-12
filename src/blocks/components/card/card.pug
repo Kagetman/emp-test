@@ -1,0 +1,91 @@
+-
+    const cards = [
+        {
+            img: "./img/img-offer.jpg",
+            alt: "lectus magna",
+            price: "$ 59,345",
+            text: "Lorem ipsum dolor sit",
+            feature: {
+                item: [
+                    {
+                        modifier: "card__feature--price",
+                        icon: "./img/sprites/sprite.svg#icon-card-1",
+                        text: "2500 sqft"
+                    },
+                    {
+                        modifier: "card__feature--amt",
+                        icon: "./img/sprites/sprite.svg#icon-card-2",
+                        text: "3"
+                    },
+                    {
+                        modifier: "card__feature--num",
+                        icon: "./img/sprites/sprite.svg#icon-card-3",
+                        text: "2"
+                    }
+                ]
+            }
+        },
+        {
+            img: "./img/img-card.jpg",
+            alt: "lectus magna",
+            price: "$ 59,345",
+            text: "Lorem ipsum dolor sit",
+            feature: {
+                item: [
+                    {
+                        modifier: "card__feature--price",
+                        icon: "./img/sprites/sprite.svg#icon-card-1",
+                        text: "2500 sqft"
+                    },
+                    {
+                        modifier: "card__feature--amt",
+                        icon: "./img/sprites/sprite.svg#icon-card-2",
+                        text: "3"
+                    },
+                    {
+                        modifier: "card__feature--num",
+                        icon: "./img/sprites/sprite.svg#icon-card-3",
+                        text: "2"
+                    }
+                ]
+            }
+        },
+        {
+            img: "./img/img-service.jpg",
+            alt: "lectus magna",
+            price: "$ 29,345",
+            text: "Lorem ipsum dolor sit",
+            feature: {
+                item: [
+                    {
+                        modifier: "card__feature--price",
+                        icon: "./img/sprites/sprite.svg#icon-card-1",
+                        text: "2500 sqft"
+                    },
+                    {
+                        modifier: "card__feature--amt",
+                        icon: "./img/sprites/sprite.svg#icon-card-2",
+                        text: "3"
+                    },
+                    {
+                        modifier: "card__feature--num",
+                        icon: "./img/sprites/sprite.svg#icon-card-3",
+                        text: "2"
+                    }
+                ]
+            }
+        }
+    ]
+
+each card in cards
+    article.card
+        a.card__link(href="#")
+            .card__img
+                img(src=card.img alt=card.alt)
+            .card__content
+                span.card__price= card.price
+                h3.card__text= card.text
+                ul.card__features
+                    each item in card.feature.item
+                        li.card__feature(class=item.modifier)
+                            span.card__label=item.text

@@ -1,0 +1,54 @@
+.offer {
+  padding: 100px 0;
+  color: var(--light-color);
+
+  &__inner {
+    @include main-container();
+    position: relative;
+    display: flex;
+    padding-top: 0;
+  }
+
+  &__left {
+    position: relative;
+    z-index: 2;
+    max-width: 654px;
+    width: 100%;
+    min-height: var(--decors-height);
+  }
+
+  &__decors {
+    position: absolute;
+    right: var(--container-padding);
+    top: 0;
+    max-width: 603px;
+    width: 100%;
+    height: var(--decors-height);
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      @extend %img-cover;
+    }
+  }
+
+  &__title {
+    font-size: 58px;
+    margin: 0 0 28px;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__content {
+    max-width: 500px;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin: 0 0 36px 0;
+    color: rgba(var(--light-color-opaciy-80));
+  }
+}

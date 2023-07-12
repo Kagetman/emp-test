@@ -1,0 +1,14 @@
+.blog {
+  background-color: var(--light-color);
+
+  &__inner {
+    @include main-container();
+    padding-bottom: 150px;
+  }
+
+  &__title {
+    @extend %h2-title;
+    margin: 0 0 54px;
+  }
+}
+

@@ -1,0 +1,66 @@
+.contacts {
+  background-color: var(--light-color);
+
+  &__inner {
+    @include main-container();
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__title {
+    @extend %h2-title;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    gap: 30px 80px;
+    flex-wrap: wrap;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+
+    &--location {
+      @include before-icon(24px, "icon-address");
+    }
+
+    &--phone {
+      @include before-icon(24px, "icon-phone");
+    }
+
+    &--email {
+      @include before-icon(24px, "icon-email");
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__map {
+    margin-top: auto;
+    width: 525px;
+    height: 272px;
+    border-radius: var(--round-border-radius);
+    overflow: hidden;
+  }
+
+  &__form {
+    flex: 1 1 0;
+  }
+}

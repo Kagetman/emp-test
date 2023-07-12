@@ -1,0 +1,5 @@
+mixin form(typeInput, modifierInput, placeholder, text, modifierBtn, typeBtn, modifierForm)
+    form.form(class=modifierForm)
+        .form__group
+            input.field(type=typeInput class=modifierInput placeholder=placeholder)
+            button.button(class=modifierBtn type=typeBtn)=text

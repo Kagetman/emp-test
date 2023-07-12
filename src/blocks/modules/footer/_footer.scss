@@ -1,0 +1,36 @@
+.footer {
+  @extend %dark-theme;
+  @include page-menu(16px, 700, 40px);
+
+  &__inner {
+    @include main-container();
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__bottom {
+    margin-top: 80px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(var(--light-color-opaciy-70));
+  }
+
+  &__link {
+    color: rgba(var(--secondary-color-opacity-70));
+
+    &--active {
+
+      color: var(--light-color);
+    }
+  }
+}
